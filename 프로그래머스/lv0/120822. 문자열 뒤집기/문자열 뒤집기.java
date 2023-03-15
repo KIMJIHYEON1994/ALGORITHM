@@ -1,7 +1,7 @@
 class Solution {
     public String solution(String my_string) {       
-        StringBuffer reverse = new StringBuffer(my_string);
-        String reverseStr = reverse.reverse().toString();
+        StringBuffer sb = new StringBuffer(my_string);
+        String reverseStr = sb.reverse().toString();
         return reverseStr;
     }
 }
