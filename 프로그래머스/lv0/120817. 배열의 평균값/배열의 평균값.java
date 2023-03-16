@@ -5,6 +5,8 @@ class Solution {
         for (int i = 0; i < numbers.length; i++) {
             sum += numbers[i];
         }
-        return sum / numbers.length;
+        
+        double avg = sum / numbers.length;
+        return avg;
     }
 }
