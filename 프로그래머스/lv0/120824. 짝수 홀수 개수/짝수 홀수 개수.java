@@ -12,3 +12,7 @@ class Solution {
         return result;
     }
 }
+
+// for (int i = 0; i < num_list.length; i++) {
+//     result = (num_list[i] % 2 == 0) ? result[0] += 1 : result[1] += 1;
+// }
