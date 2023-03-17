@@ -1,14 +1,15 @@
+import java.util.ArrayList;
+
 class Solution {
     public int[] solution(int n) {
-        int[] answer = new int[(int) Math.ceil((double) n / 2)];
-        int num = 1;
-        
-        for (int i = 0; i < answer.length; i++) {
-            if (num % 2 == 1) {
-                answer[i] = num;
+        ArrayList<Integer> answer = new ArrayList<Integer>();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 != 0) {
+                answer.add(i);
             }
-            num += 2;
         }
-        return answer;
+
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 }
