@@ -6,10 +6,9 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int inputCount = Integer.parseInt(br.readLine());
         Stack<Integer> stack = new Stack<>();
 
-        for (String inputLine : br.lines().limit(inputCount).toArray(String[]::new)) {
+        for (String inputLine : br.lines().toArray(String[]::new)) {
             String[] input = inputLine.split(" ");
 
             switch (input[0]) {
