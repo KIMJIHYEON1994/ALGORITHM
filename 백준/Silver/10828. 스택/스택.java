@@ -14,7 +14,8 @@ public class Main {
 
             switch (input[0]) {
                 case "push":
-                    stack.push(Integer.parseInt(input[1]));
+                    int value = Integer.parseInt(input[1]);
+                    stack.push(value);
                     break;
                 case "pop":
                     int stackPop = stack.isEmpty() ? -1 : stack.pop();
