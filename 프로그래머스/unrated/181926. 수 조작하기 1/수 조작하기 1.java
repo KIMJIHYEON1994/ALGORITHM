@@ -1,14 +1,18 @@
 class Solution {
     public int solution(int n, String control) {
-        for (int i = 0; i < control.length(); i++) {
-            if (control.substring(i, i + 1).equals("w")) {
-                n += 1;
-            } else if (control.substring(i, i + 1).equals("s")) {
-                n -= 1;
-            } else if (control.substring(i, i + 1).equals("d")) {
-                n += 10;
-            } else {
-                n -= 10;
+        for (char ch : control.toCharArray()) {
+            switch (ch) {
+                case 'w' : n += 1;
+                break;
+                
+                case 's' : n -= 1;
+                break;
+                
+                case 'd' : n += 10;
+                break;
+                
+                case 'a' : n -= 10;
+                break;
             }
         }
         return n;
