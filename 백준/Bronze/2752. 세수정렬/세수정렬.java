@@ -1,29 +1,22 @@
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
+        int[] numbers = new int[3];
 
-        if (a > b) {
-            int temp = a;
-            a = b;
-            b = temp;
+        for (int i = 0; i < 3; i++) {
+            numbers[i] = sc.nextInt();
         }
-        if (b > c) {
-            int temp = b;
-            b = c;
-            c = temp;
+
+        Arrays.sort(numbers);
+
+        for (int i = 0; i < 3; i++) {
+            System.out.print(numbers[i] + " ");
         }
-        if (a > b) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
-        System.out.println(a + " " + b + " " + c + " ");
+        sc.close();
     }
 }
